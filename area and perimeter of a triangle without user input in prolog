@@ -1,0 +1,15 @@
+tri:-
+write('the area of triangle is:'),
+S is ((2+3+4)/2),
+Area is (sqrt(S*(S-2)*(S-3)*(S-4))),
+write(Area),nl,
+write('the perimeter of triangle is:'),
+P is (2+3+4),
+write(P).
+
+
+%output
+| ?- tri.
+the area of triangle is:2.9047375096555625
+the perimeter of triangle is:9
+
