@@ -1,0 +1,14 @@
+mult_list([],1).
+mult_list([Head|Tail],TotalMult):-
+mult_list(Tail,Mult),
+TotalMult is Head*Mult. 
+
+%output
+| ?- [multoflist].
+compiling C:/GNU-Prolog/prolog 1/multoflist.pl for byte code...
+C:/GNU-Prolog/prolog 1/multoflist.pl compiled, 3 lines read - 647 bytes written, 3 ms
+
+yes
+| ?- mult_list([1,2,3,4],L).
+
+L = 24
