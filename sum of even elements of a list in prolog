@@ -1,0 +1,33 @@
+even(X) :- 
+  Y is mod(X,2),       % using "is" to evaluate to number
+  Y =:= 0.
+
+odd(X) :-              % using even
+  Y is X + 1,
+  even(Y).
+
+sum_even(0, []).       % empty list has zero sum
+sum_even(X, [H|T]) :- 
+  even(H),
+  sum_even(Y, T), 
+  X is Y+H.
+sum_even(X, [H|T]) :- 
+  odd(H),
+  sum_even(X, T).      % ignore the odd numbers
+  
+  
+  
+ %output
+ | ?- [sumofeven].
+compiling C:/GNU-Prolog/prolog 1/sumofeven.pl for byte code...
+C:/GNU-Prolog/prolog 1/sumofeven.pl compiled, 15 lines read - 1659 bytes written, 4 ms
+
+yes
+| ?- sum_even(X,[5,4,3,2,1,0]).
+
+X = 6 ? ;
+
+no
+| ?- sum_even(X,[3]).
+
+X = 0 ? 
