@@ -1,21 +1,21 @@
-even(X) :- Y is mod(X,2),Y =:= 0.                 % using "is" to evaluate to number
-odd(X) :-Y is X + 1,even(Y).                      % using even
-sum_even(0, []).                                  % empty list has zero sum
-sum_even(X, [H|T]) :-even(H),sum_even(X, T).      % ignore the odd numbers
-sum_even(X, [H|T]) :-odd(H),sum_even(Z, T),X is Z+H.      
+even(X) :- Y is mod(X,2),Y =:= 0.                     % using "is" to evaluate to number
+odd(X) :-Y is X + 1,even(Y).                          % using even
+sum_odd(0, []).                                       % empty list has zero sum
+sum_odd(X, [H|T]) :-even(H),sum_even(X, T).           % ignore the even numbers
+sum_odd(X, [H|T]) :-odd(H),sum_even(Z, T),X is Z+H.   %printing the sum of odd numbers      
 
 
 %output
 | ?- [sumofodd].
 compiling C:/GNU-Prolog/prolog 1/sumofodd.pl for byte code...
-C:/GNU-Prolog/prolog 1/sumofodd.pl compiled, 4 lines read - 1657 bytes written, 4 ms
+C:/GNU-Prolog/prolog 1/sumofodd.pl compiled, 4 lines read - 1653 bytes written, 4 ms
 
 yes
-| ?- sum_even(X,[5,4,3,2]).
+| ?- sum_odd(X,[5,4,3,2]).
 
 X = 8 ? ;
 
 no
-| ?- sum_even(X,[2]).
+| ?- sum_odd(X,[2]).
 
 X = 0 ? 
