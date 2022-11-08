@@ -1,0 +1,27 @@
+area1:-
+write('enter A:'),
+read(A),
+write('enter B:'),
+read(B),
+write('enter C:'),
+read(C),
+S is ((A+B+C)/2),
+Area is (sqrt(S*(S-A)*(S-B)*(S-C))),
+write('area of triangle is:'),
+write(Area),nl,
+S1 is A+B+C,
+write('perimeter is:'), 
+write(S1).
+
+%output
+%| ?- [area1].
+compiling C:/GNU-Prolog/prolog 1/area1.pl for byte code...
+C:/GNU-Prolog/prolog 1/area1.pl compiled, 13 lines read - 2037 bytes written, 4 ms
+
+(15 ms) yes
+| ?- area1.
+enter A:1.
+enter B:1.
+enter C:1.
+area of triangle is:0.4330127018922193
+perimeter is:3
