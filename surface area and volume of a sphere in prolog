@@ -1,0 +1,21 @@
+areas:-
+write('enter Radius:'),
+read(Radius),
+SurfaceArea is 4*(22/7)*Radius*Radius,
+write('SurfaceArea of rectangle is:'),
+write(SurfaceArea),nl,
+Volume is (4/3)*(22/7)*Radius*Radius*Radius,
+write('Volume of rectangle is:'), 
+write(Volume).
+
+%output
+| ?- [areas].
+compiling C:/GNU-Prolog/prolog 1/areas.pl for byte code...
+C:/GNU-Prolog/prolog 1/areas.pl compiled, 8 lines read - 1621 bytes written, 4 ms
+
+yes
+| ?- areas.
+enter Radius:2
+.
+SurfaceArea of rectangle is:50.285714285714285
+Volume of rectangle is:33.523809523809518
