@@ -1,0 +1,17 @@
+note:works only for offline compiler
+sum([],[0,0]).
+sum([H|T],[N1,N2]):- sum(T,[N3,N2]), iseven(H), N1 is N3+H.
+sum([H|T],[N1,N2]):- sum(T,[N1,N3]), \+ iseven(H), N2 is N3+H.
+
+%output
+yes
+| ?- [sumofoddandeven].
+compiling C:/GNU-Prolog/prolog 1/sumofoddandeven.pl for byte code...
+C:/GNU-Prolog/prolog 1/sumofoddandeven.pl compiled, 2 lines read - 1560 bytes written, 9 ms
+warning: C:/GNU-Prolog/prolog 1/sumofoddandeven.pl:1: redefining procedure sum/2
+         C:/GNU-Prolog/prolog 1/oddl.pl:1: previous definition
+
+yes
+| ?- sum([1,2,3,4],L).
+
+L = [6,4] ? 
