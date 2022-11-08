@@ -1,0 +1,24 @@
+arear:-
+write('enter Length:'),
+read(Length),
+write('enter Breadth:'),
+read(Breadth),
+Area is Length*Breadth,
+write('area of rectangle is:'),
+write(Area),nl,
+S1 is 2*(Length+Breadth),
+write('perimeter is:'), 
+write(S1).
+
+
+%output
+| ?- [arear].
+compiling C:/GNU-Prolog/prolog 1/arear.pl for byte code...
+C:/GNU-Prolog/prolog 1/arear.pl compiled, 10 lines read - 1196 bytes written, 4 ms
+
+yes
+| ?- arear.
+enter Length:2.
+enter Breadth:3.
+area of rectangle is:6
+perimeter is:10
