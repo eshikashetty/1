@@ -1,0 +1,21 @@
+main = do
+       putStrLn("Enter magnitude of length and breadth of rect")
+       lin <- getLine
+       let l = (read lin :: Float)
+       bin <- getLine
+       let b= (read bin :: Float)
+       let area= l*b
+       putStrLn("The area of triangle is ")
+       print(area)
+       let peri= 2*(l+b)
+       putStrLn("The perimeter of rectangle is ")
+       print(peri)
+       
+--output
+Enter magnitude of length and breadth of rect
+3
+3
+The area of triangle is 
+9.0
+The perimeter of rectangle is 
+12.0
