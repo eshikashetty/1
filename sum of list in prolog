@@ -1,0 +1,14 @@
+list_sum([],0).
+list_sum([Head|Tail],TotalSum):-
+list_sum(Tail,Sum),
+TotalSum is Head+Sum. 
+
+%output
+| ?- [sumoflist].
+compiling C:/GNU-Prolog/prolog 1/sumoflist.pl for byte code...
+C:/GNU-Prolog/prolog 1/sumoflist.pl compiled, 3 lines read - 640 bytes written, 7 ms
+
+yes
+| ?- list_sum([1,2,3,4],L).
+
+L = 10
